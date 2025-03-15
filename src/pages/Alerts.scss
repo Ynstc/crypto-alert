@@ -1,0 +1,32 @@
+@import '../styles/variables';
+
+.alerts-page {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: $spacing-md;
+  
+  h1 {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    color: $color-text;
+  }
+  
+  .current-price {
+    background-color: $color-white;
+    padding: $spacing-md;
+    border-radius: $border-radius;
+    margin-bottom: $spacing-md;
+    box-shadow: $box-shadow-small;
+    
+    h2 {
+      margin-top: 0;
+      color: $color-text;
+    }
+  }
+
+  .alerts-containers {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+}

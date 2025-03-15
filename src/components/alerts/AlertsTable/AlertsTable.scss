@@ -1,0 +1,84 @@
+@import '../../../styles/variables';
+
+
+.alerts-table-container {
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+.alerts-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  
+  thead {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+  }
+  
+  tbody {
+    display: block;
+    width: 100%;
+    height: 430px;
+    overflow-y: auto;
+    overflow-x: visible;
+  }
+  
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 40px;
+    box-sizing: border-box;
+  }
+  
+  th {
+    background-color: #333;
+    font-weight: 600;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.empty-message {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@include tablet {
+  .alerts-table-container {
+    overflow-x: initial; 
+  }
+
+  .alerts-table {
+    min-width: initial;
+    
+    tbody {
+      overflow-x: hidden;
+    }
+  }
+} 

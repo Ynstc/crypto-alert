@@ -1,0 +1,71 @@
+// Breakpoints
+$breakpoint-mobile: 360px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1025px;
+
+// Layout
+$content-max-width: 1000px;
+
+// Typography
+$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+$font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+
+// Mixins for media queries (mobile first)
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+// Colors
+$color-primary: #007bff;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+
+$color-white: #fff;
+$color-text: #333;
+$color-text-secondary: #666;
+$color-text-light: #888;
+$color-error-bg: #ffebee;
+$color-error-text: #c62828;
+$color-buy-bg: #e8f5e9;
+$color-sell-bg: #ffebee;
+$color-alert-bg: #fff9c4;
+
+// Navigation colors
+$nav-background: #333;
+$nav-text: white;
+$nav-hover-bg: rgba(255, 255, 255, 0.1);
+$nav-start-button: #4caf50;
+$nav-start-button-hover: #3e8e41;
+$nav-stop-button: #f44336;
+$nav-stop-button-hover: #d32f2f;
+
+// Shadows and borders
+$box-shadow-small: 0 2px 5px rgba(0, 0, 0, 0.1);
+$box-shadow-medium: 0 2px 4px rgba(0, 0, 0, 0.2);
+$border-light: 1px solid #ddd;
+$border-lighter: 1px solid #eee;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 2.5rem;
+
+// Border radius
+$border-radius: 8px;
+$border-radius-sm: 4px;
+
+// Box shadow
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 

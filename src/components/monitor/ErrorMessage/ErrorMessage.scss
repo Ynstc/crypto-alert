@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+
+  .error-message {
+    padding: $spacing-md;
+    background-color: $color-error-bg;
+    color: $color-error-text;
+    border-radius: $border-radius;
+    margin-bottom: $spacing-md;
+    font-size: 0.9rem;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+  }

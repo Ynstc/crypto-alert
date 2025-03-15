@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+
+.alerts-section {
+  background-color: $color-white;
+  border-radius: $border-radius;
+  padding: $spacing-md;
+  box-shadow: $box-shadow-small;
+  
+  .alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-sm;
+    
+    h3 {
+      margin: 0;
+      color: $color-text;
+    }
+    
+    .alert-count {
+      color: $color-text-secondary;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .alert-description {
+    color: $color-text-secondary;
+    margin-bottom: $spacing-md;
+    font-style: italic;
+  }
+} 

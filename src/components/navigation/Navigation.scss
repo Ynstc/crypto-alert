@@ -1,0 +1,113 @@
+@import '../../styles/variables';
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  background-color: $nav-background;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  box-shadow: $box-shadow-medium;
+  margin: 0;
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: $content-max-width;
+    padding: $spacing-md;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: $spacing-md;
+    width: 100%;
+    justify-content: center;
+
+    @include tablet {
+      width: auto;
+    }
+  }
+
+  .nav-link {
+    color: $nav-text;
+    text-decoration: none;
+    font-weight: bold;
+    padding: $spacing-xs $spacing-md;
+    border-radius: $border-radius-sm;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $nav-hover-bg;
+    }
+  }
+
+  .socket-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-md;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: row;
+      width: auto;
+    }
+  }
+
+  .connection-toggle {
+    padding: $spacing-sm $spacing-md;
+    border: none;
+    border-radius: $border-radius-sm;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &.start {
+      background-color: $nav-start-button;
+      color: $nav-text;
+
+      &:hover {
+        background-color: $nav-start-button-hover;
+      }
+    }
+
+    &.stop {
+      background-color: $nav-stop-button;
+      color: $nav-text;
+
+      &:hover {
+        background-color: $nav-stop-button-hover;
+      }
+    }
+  }
+
+  .connection-status {
+    color: $nav-text;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+    
+    @include tablet {
+      justify-content: flex-end;
+      width: 10rem;
+    }
+    
+    .loader {
+      margin-left: 4px;
+    }
+  }
+} 

@@ -1,0 +1,28 @@
+@import './variables';
+
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-white;
+  color: $color-text;
+}
+
+code {
+  font-family: $font-family-code;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $color-primary;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+} 

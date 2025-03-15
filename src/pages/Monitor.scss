@@ -1,0 +1,27 @@
+@import '../styles/variables';
+
+.monitor-page {
+  padding: $spacing-md;
+  max-width: $content-max-width;
+  margin: 0 auto;
+
+  h1 {
+    margin-bottom: $spacing-lg;
+    color: $color-text;
+    text-align: center;
+  }
+
+  .trades-container {
+    h2 {
+      margin-bottom: $spacing-md;
+    }
+
+    .no-trades {
+      color: $color-text;
+    }
+  }
+
+  .page-content {
+    margin-bottom: $spacing-lg;
+  }
+} 

@@ -1,0 +1,121 @@
+@import '../../../styles/variables';
+
+.trade-info-container {
+  width: 100%;
+  margin-top: $spacing-sm;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto; 
+}
+
+.trades-count {
+  text-align: right;
+  padding: $spacing-xs $spacing-sm;
+  font-weight: 500;
+  color: $color-text;
+  margin-bottom: $spacing-xs;
+}
+
+.trade-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+  
+  thead {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+  }
+  
+  tbody {
+    display: block;
+    width: 100%;
+    height: 430px;
+    overflow-y: auto;
+    overflow-x: visible; 
+  }
+  
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  th, td {
+    padding: $spacing-sm;
+    text-align: left;
+    border-bottom: $border-lighter;
+    height: 40px;
+    box-sizing: border-box;
+  }
+  
+  th {
+    background-color: $color-text;
+    font-weight: 600;
+    color: white;
+  }
+  
+
+  tr.buy {
+    background-color: $color-buy-bg;
+  }
+  
+  tr.sell {
+    background-color: $color-sell-bg;
+  }
+  
+  tr.alert {
+    background-color: $color-alert-bg;
+  }
+
+  tr:hover {
+    filter: brightness(0.95);
+  }
+
+  .price {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-primary;
+  }
+
+  .quantity {
+    font-family: monospace;
+  }
+
+  .time {
+    white-space: nowrap;
+  }
+  
+  .no-trades-row {
+    text-align: center;
+    color: $color-text-light;
+    font-style: italic;
+  }
+}
+
+.empty-trades {
+  color: $color-text-light;
+  font-style: italic;
+  text-align: center;
+  padding: $spacing-md;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@include tablet {
+  .trade-info-container {
+    overflow-x: initial; 
+  }
+
+  .trade-info-table {
+    min-width: initial; 
+    
+    tbody {
+      overflow-x: hidden; 
+    }
+  }
+} 
